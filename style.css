@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color:#333 ;
+    font-family: Helvetica, sans-serif;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    
+}
+
+ul.topnav li a:hover:not(.active) {
+    
+
+    border-bottom: 3px solid #fff;
+
+}
+
+ul.topnav li a.active {
+    
+    border-bottom: 3px solid #fff;
+
+}
+
+ul.topnav li.right {
+    float: right;
+    
+}
+
+
+.header {
+    background-color: #234F4F;
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/09/11/44/network-1246209_1280.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    font-size: 35px;
+    
+}
+
+.projectspace {
+    
+    background-color: #9D9D9D;
+    padding-top: 50px;
+    padding-bottom: 400px;
+    font-size: 25px;
+    
+}
+
+#typer{
+    
+    font-size: 80px;
+    color:#101010;
+}
+
+#typer-replace {
+    
+    display:none;
+    
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+    width: 15%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#blogd {
+    color:dimgrey;
+    margin: 0px;
+    padding:0px;
+    
+}
+
+#blogt {
+    margin: 0px;
+    padding:0px;
+}
+
+
+.blogpost {
+    
+    float: right;
+    padding: 0px;
+    margin:0px;
+    width: 400px;
+}
+
+.cf img {
+    
+    width: 500px;
+ 
+    
+    height: auto;
+}
+
+.cf div  {
+    float:left;
+}
+
+
+
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+.flexbox{
+    
+    display:flex;
+    justify-content: center;
+}
+
+.flexbox-item {
+    
+    width:200px;
+    margin: 10px;
+    text-align: center;
+    border: 3px solid #333333;
+    background-color: #dfdfdf;    
+    
+}
+
+.cs351 {
+    
+    min-height: 200px;
+    width: 400px;
+    
+}
+.hcbox {
+  
+    min-height: 100px;
+    width: 400px;
+}
+
+.jsbox {
+  
+    min-height: 100px;
+    width: 400px;
+}
+
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/*fix this */
+
+
+@media screen and (max-width: 600px) {
+    
+    ul.topnav li.right, 
+    ul.topnav li {
+        
+        float: none;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    
+ #typer{
+     
+        display: none;
+    }
+
+    .flexbox {
+        
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+    
+    #typer-replace {
+        
+        display:contents;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    
+  .column.side, .column.middle {
+    width: 100%;
+  }
+ 
+    
+}
+
+
