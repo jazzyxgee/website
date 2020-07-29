@@ -1,0 +1,361 @@
+/* CSS Document */
+
+* {
+	
+	box-sizing: border-box;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+body {
+	
+	margin: 0;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+
+}
+
+#hero {
+	
+	width: 100vw;
+    height: 100vh;
+	
+	background-image: url("images/herocat.jpg");
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+	
+}
+
+
+.hero-inner h1 {
+	
+	margin:0;
+	color: white;
+	font-size: 4em;
+	text-align: center;
+	
+}
+
+a.button {
+	
+	-webkit-appearance: button;    
+	-moz-appearance: button;
+    appearance: button;
+
+    
+	display: block;
+	
+	padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+	
+    width: 150px;
+	
+	background-color: rgba(192,192,192,0.3);
+	color: white;
+	text-align: center;
+	
+	border: 3px solid black;
+
+}
+
+.button:hover{
+
+	-webkit-appearance: button;    
+	-moz-appearance: button;
+    appearance: button;
+	
+	background-color: black;
+	
+}
+
+ul.topnav {
+	
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #333;
+}
+
+ul.topnav li {
+	
+	float: left;
+
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+	
+}
+
+ul.topnav li a:hover{
+	
+	background-color: #5B5858;
+	
+}
+
+ul.topnav li.right {float: right;}
+
+
+.content {
+	
+	background-color: dimgray;
+	padding: 90px;
+	
+	
+}
+
+
+/* gallery */
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding-bottom:0px;
+	padding-top:0px;
+  float: left;
+  	width: 24.99999%;
+	height: 80%;
+}
+
+.paddingspot {
+	
+	padding: 100px;
+}
+
+.paddingspot p {
+	
+	color:white;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*about me */
+
+.wrapper { 
+  border : 2px solid #000; 
+	background-color: gray;
+  overflow:hidden;
+}
+
+.wrapper div {
+	
+   min-height: 250px;
+   padding: 10px;
+}
+
+#one {
+  background-color: gray;
+  float:left; 
+  margin-right:20px;
+  width:45%;
+
+}
+
+#two { 
+  background-color: white;
+  overflow:hidden;
+  margin:10px;
+  border:2px solid #ccc;
+  min-height:170px;
+}
+
+ul {
+	
+	list-style-type: none;
+}
+
+img {
+	
+  max-width: 100%;
+  height: auto;
+	
+}
+
+
+a.social{
+	
+	text-decoration: none;
+	color:black;
+}
+
+
+/* form */
+
+
+input[type=text], select, textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+	
+
+  background-color: dimgrey;
+	
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: gray;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.footer{
+	
+	position: fixed;
+	
+	left: 0;
+   	bottom: 0px;
+   	width: 100%;
+		
+	background-color: yellow;
+	padding-bottom: 0px;		
+	
+}
+
+.footer ul {
+  list-style: none;
+  display: block;
+  float: left;
+}
+
+
+.footer a{
+	
+	font-weight: bold;
+	color: black;
+	font-size: 11px;
+}
+
+#right{
+	
+	float:right;
+	font-size: 12px;
+	
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+   
+  ul.topnav li, ul.topnav li.right {
+	  float: none;
+	}
+	
+	 .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+	
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+   #one { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;    
+  }
+	
+	.col-25, .col-75, input[type=submit]{
+    width: 100%;
+    margin-top: 0;
+		
+	
+  }
+	
+
+	
+}
