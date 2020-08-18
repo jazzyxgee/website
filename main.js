@@ -61,3 +61,5 @@ function init(){
         new TypeWriter(txtElement,words,wait);
         
 }
+
+//From Traversy -- https://www.youtube.com/watch?v=POX3dT-pB4E
