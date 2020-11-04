@@ -68,7 +68,7 @@ ul.topnav li.right {
     
     background-color: #9D9D9D;
     padding-top: 50px;
-    padding-bottom: 400px;
+    padding-bottom: 355px;
     font-size: 25px;
     
 }
@@ -193,7 +193,7 @@ ul.topnav li.right {
 
 .footer {
     background-color: #333;
-    padding: 10px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -238,8 +238,8 @@ ul.topnav li.right {
   .column.side, .column.middle {
     width: 100%;
   }
+
  
     
 }
-
 
