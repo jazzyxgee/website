@@ -286,7 +286,7 @@ body {
 /*responsive with the use of media queries*/
 @media only screen and (max-width: 550px) {
     body {
-       height:100vh;
+        background-image:url("images/javier-esteban-freeway-smaller.jpg");
     }
     
     .grid {
