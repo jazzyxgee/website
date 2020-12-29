@@ -1,245 +1,402 @@
-@charset "utf-8";
-
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
-    background-color:#333 ;
-    font-family: Helvetica, sans-serif;
-}
-
-ul.topnav {
-    list-style-type: none;
+    
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-ul.topnav li {
-    float: left;
-}
-
-ul.topnav li a {
     
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 5px 16px;
-    text-decoration: none;
-    
-}
+    font-family: monospace, sans-serif;
 
-ul.topnav li a:hover:not(.active) {
-    
-
-    border-bottom: 3px solid #fff;
-
-}
-
-ul.topnav li a.active {
-    
-    border-bottom: 3px solid #fff;
-
-}
-
-ul.topnav li.right {
-    float: right;
-    
-}
-
-
-.header {
-    background-color: #234F4F;
-    background-image: url("https://cdn.pixabay.com/photo/2016/03/09/11/44/network-1246209_1280.jpg");
+    background-color:black;
+    background-image:url("images/javier-esteban-freeway.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    text-align: center;
-    font-size: 35px;
+    background-position: center;
+}
+
+/*css grid layout for home-page*/
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 4fr .2fr;
+    
+    grid-template-areas:
+        "topnav topnav topnav"
+        "main main main"
+        "footer footer footer";
+    grid-gap: 0;
+    
     
 }
 
-.projectspace {
+.grid2 {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2fr 2fr .2fr;
     
-    background-color: #9D9D9D;
-    padding-top: 50px;
-    padding-bottom: 355px;
-    font-size: 25px;
+    grid-template-areas:
+        "topnav topnav topnav topnav"
+        "projects projects projects projects"
+        "content1 content2 content3 content4"
+        "footer footer footer footer";
+    grid-column-gap: .2em;
+}
+
+.grid3 {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 4fr .2fr;
     
+    grid-template-areas:
+        "topnav topnav topnav"
+        "about about about"
+        "footer footer footer";
+    grid-gap: 0;
 }
 
-#typer{
+
+/*nested grid navigation and nav styling*/
+.top-nav {
     
-    font-size: 80px;
-    color:#101010;
+    grid-area: topnav;
 }
 
-#typer-replace {
-    
-    display:none;
-    
-}
-
-.column {
-    float: left;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Left and right column */
-.column.side {
-    width: 15%;
-}
-
-/* Middle column */
-.column.middle {
-    width: 70%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#blogd {
-    color:dimgrey;
-    margin: 0px;
-    padding:0px;
-    
-}
-
-#blogt {
-    margin: 0px;
-    padding:0px;
-}
-
-
-.blogpost {
-    
-    float: right;
+.top-nav ul {
+    display: grid;
+    grid-gap: 1em;
     padding: 0px;
-    margin:0px;
-    width: 400px;
-}
-
-.cf img {
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
     
-    width: 500px;
- 
+}
+
+.top-nav a {
+    display: block;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+}
+.active{
+    text-decoration: #4be1f4 underline; 
+}
+
+.top-nav a:hover {
     
-    height: auto;
+    text-decoration: #4be1f4 overline;
 }
-
-.cf div  {
-    float:left;
-}
+/*end nav*/
 
 
-
-
-
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-
-.flexbox{
+/*main header and heading*/
+.main-header {
     
-    display:flex;
+    grid-area: main;
+    display: flex;
     justify-content: center;
+    align-items: center;
+   
 }
 
-.flexbox-item {
+#name-header{
     
-    width:200px;
-    margin: 10px;
     text-align: center;
-    border: 3px solid #333333;
-    background-color: #dfdfdf;    
+    color: #0078d7;
+    background-color: white;
+    font-size: 150px; 
+}
+
+/*project space area*/
+.project-space {
+    background: white;
+    border: double;
+    grid-area: projects;
+    margin-bottom: 0px;    
+}
+
+.main-text-area{
+    background: #aa2954;
+    grid-area: about;
+    margin-bottom: 0px; 
+}
+
+.social-area {
+    
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    height:400px;
+    grid-gap: .2em;
+    
     
 }
-
-.cs351 {
+.social-area a {
     
-    min-height: 200px;
-    width: 400px;
+    color:red;
+    text-decoration: red underline;
+}
+
+.social-area a:hover {
+    color:black;
+    font-style: italic;
+    text-decoration: none;
+}
+
+/*side bar*/
+
+#sidebar {
+    background: rgba(23, 23, 23, 0.6);
+    grid-area: sidebar;
+    border: double;
+}
+
+/*content areas*/
+
+#box1 {
     
-}
-.hcbox {
-  
-    min-height: 100px;
-    width: 400px;
-}
+    background: #d87d1d;
+    grid-area: content1;
+    border: double;
 
-.jsbox {
-  
-    min-height: 100px;
-    width: 400px;
 }
 
+#box2 {
+    background: #d87d1d;
+    grid-area: content2;
+    border: double;
 
-.footer {
-    background-color: #333;
+}
+
+#box3 {
+    background: #d87d1d;
+    grid-area: content3;
+    border: double;
+}
+
+#box4 {
+    
+    background: #d87d1d;
+    grid-area: content4;
+    border: double;
+}
+/*photos on about me page*/
+
+.photos {
+    
+    background-attachment: fixed;
+    background-size: cover; 
+    display: grid;
     padding: 0px;
-    text-align: center;
+    
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.photo1{
+    background: url("images/sunset-cliffs.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    grid-column: 1/3;
+    
+    
+}
+.photo2{
+    background:url(images/mugshot4.jpg); 
+    background-position: center;
+    background-size: cover;
+    
+    grid-column: 3/4;
+    
+}
+.photo3{
+    background: url(images/photoofme1.jpg);
+    background-position: center;
+    background-size: cover;
+   
+    height: 300px;
+    grid-column: 1/2;
+}    
+
+.photo4{
+    background: url("images/streets-background.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 2/4;
+
+}
+
+.email {
+    background-color:rgba(255, 255, 255, 0.7);
+    grid-column: 1/2;
+      
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.github {
+    background-color:rgba(255, 255, 255, 0.6);
+    grid-column: 2;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 
 
+.linkedin {
+    background-color:rgba(255, 255, 255, 0.7);
+    justify-content: start;
+    grid-column: 3;
+       
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+/*footer*/
+.footer {
+    background: rgba(23, 23, 23, 0.6);
+    grid-area: footer;
 
-/*fix this */
+}
+.footer ul {
+    list-style: none;
+    float:left;
 
-
-@media screen and (max-width: 600px) {
     
-    ul.topnav li.right, 
-    ul.topnav li {
+}
+
+.footer a {
+    text-decoration: none;
+    color:white;
+}
+
+.footer a:hover {
+    
+    text-decoration: #4be1f4 underline;
+}
+
+
+/*responsive with the use of media queries*/
+@media only screen and (max-width: 550px) {
+    .grid {
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 4fr 1fr;
+        grid-template-areas:
+            "topnav"
+            "main"
+            "footer";  
+    }
+    .grid2 {
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "topnav"
+            "projects"
+            "content1"
+            "content2"
+            "content3"
+            "content4"
+            "footer";
+        grid-row-gap: .3em;
+    }
+    .grid3 {
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 4fr 1fr;
+        grid-template-areas:
+            "topnav"
+            "about"
+            "footer";  
+    }
+    
+    .photos {
+    
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         
+    }
+    .photo1 {
+        grid-row: 1/1;
+        grid-column: 1/4;
+        
+    }
+    .photo2 {
+        grid-row: 2/2;
+        grid-column: 1/4;
+        
+    }
+    .photo3 {
+        grid-row: 3/3;
+        grid-column: 1/4;
+        
+    }
+    .photo4 {
+        grid-row: 4/4;
+        grid-column: 1/4;
+        
+    }
+
+    .main-text-area{
+        
+        padding-bottom: 200px;
+    }
+    .social-area {
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+    }
+    .email {
+        background-color:rgba(255, 255, 255, 0.7);
+        grid-column: 1/4;
+        grid-row: 1/1;
+        padding-top: 10px;
+        
+        flex-direction: none;
+
+    }
+    .github {
+        background-color:rgba(255, 255, 255, 0.6);
+        grid-column: 1/4;
+        grid-row: 2/2;
+        padding-top: 10px;
+        
+        display: block;
+        flex-direction: none;
+    }
+    .linkedin {
+        background-color:rgba(255, 255, 255, 0.7);
+        grid-column: 1/4;
+        grid-row: 3/3;
+        padding-top: 10px;
+        
+        justify-content:center;
+        align-items: center;
+    }
+    .main-header {
+        
+        padding-top: 0px;
+        
+    }
+    #name-header{
+        font-size: 70px; 
+    }
+    .footer ul {
+        text-align: center;
+        padding: 0;
         float: none;
     }
-    
-}
-
-@media screen and (max-width: 700px) {
-    
- #typer{
-     
-        display: none;
+    .footer-header {
+        padding: 5px;
+        margin: 0px;
     }
-
-    .flexbox {
-        
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: center;
-    }
-    
-    #typer-replace {
-        
-        display:contents;
-    }
-    
 }
-
-@media (max-width: 1000px) {
-    
-  .column.side, .column.middle {
-    width: 100%;
-  }
- 
-    
-}
-
-
