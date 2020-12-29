@@ -285,6 +285,10 @@ body {
 
 /*responsive with the use of media queries*/
 @media only screen and (max-width: 550px) {
+    body {
+       height:100vh;
+    }
+    
     .grid {
     
         grid-template-columns: 1fr;
