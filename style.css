@@ -116,7 +116,11 @@ body {
     grid-area: projects;
     margin-bottom: 0px;    
 }
-
+.project-space a {
+    
+    color:white;
+    text-decoration: red underline;
+}
 .main-text-area{
     background: #aa2954;
     grid-area: about;
@@ -133,10 +137,10 @@ body {
     
     
 }
+
 .social-area a {
-    
     color:red;
-    text-decoration: red underline;
+    text-decoration: underline;
 }
 
 .social-area a:hover {
@@ -146,6 +150,18 @@ body {
 }
 
 /*side bar*/
+.box-link {
+    color:red;
+    
+}
+
+.box-link:hover{
+    
+    color:black;
+    font-style: italic;
+    text-decoration: none;
+    
+}
 
 #sidebar {
     background: rgba(23, 23, 23, 0.6);
@@ -194,6 +210,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     
 }
+
 
 .photo1{
     background: url("images/sunset-cliffs.jpg");
@@ -251,7 +268,6 @@ body {
 
 .linkedin {
     background-color:rgba(255, 255, 255, 0.7);
-    justify-content: start;
     grid-column: 3;
        
     display: flex;
