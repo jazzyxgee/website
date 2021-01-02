@@ -34,14 +34,14 @@ body {
     height: 100vh;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2fr 2fr .2fr;
+    grid-template-rows: 0.2fr 4fr .2fr;
     
     grid-template-areas:
         "topnav topnav topnav topnav"
         "projects projects projects projects"
-        "content1 content2 content3 content4"
         "footer footer footer footer";
     grid-column-gap: .2em;
+    
 }
 
 .grid3 {
@@ -112,15 +112,10 @@ body {
 /*project space area*/
 .project-space {
     background: white;
-    border: double;
     grid-area: projects;
     margin-bottom: 0px;    
 }
-.project-space a {
-    
-    color:white;
-    text-decoration: red underline;
-}
+
 .main-text-area{
     background: #aa2954;
     grid-area: about;
@@ -134,7 +129,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     height:400px;
     grid-gap: .2em;
-    
     
 }
 
@@ -163,40 +157,44 @@ body {
     
 }
 
-#sidebar {
-    background: rgba(23, 23, 23, 0.6);
-    grid-area: sidebar;
-    border: double;
-}
 
 /*content areas*/
+.boxes {
+
+    display: grid;
+    padding: 0px;
+    margin: 5px;
+    height: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.2em;
+    
+}
 
 #box1 {
     
     background: #d87d1d;
-    grid-area: content1;
     border: double;
 
+    grid-column: 1;
 }
 
 #box2 {
     background: #d87d1d;
-    grid-area: content2;
     border: double;
-
+    grid-column: 2;
 }
 
 #box3 {
     background: #d87d1d;
-    grid-area: content3;
     border: double;
+    grid-column: 3;
 }
 
 #box4 {
     
     background: #d87d1d;
-    grid-area: content4;
     border: double;
+    grid-column: 1;
 }
 /*photos on about me page*/
 
@@ -317,14 +315,10 @@ body {
     .grid2 {
     
         grid-template-columns: 1fr;
-        grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: .2fr 4fr 1fr;
         grid-template-areas:
             "topnav"
             "projects"
-            "content1"
-            "content2"
-            "content3"
-            "content4"
             "footer";
         grid-row-gap: .3em;
     }
@@ -336,6 +330,33 @@ body {
             "topnav"
             "about"
             "footer";  
+    }
+    
+    .boxes {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        
+        margin: 0;
+    }
+    #box1 {
+        
+        grid-row: 1/1;
+        grid-column: 1/4;
+    }
+    #box2 {
+        
+        grid-row: 2/2;
+        grid-column: 1/4;
+    }
+    #box3 {
+        
+        grid-row: 3/3;
+        grid-column: 1/4;
+    }
+    #box4 {
+        
+        grid-row: 4/4;
+        grid-column: 1/4;
     }
     
     .photos {
