@@ -1,443 +1,275 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    margin: 0;
+}
 body {
-    
     margin: 0;
     padding: 0;
-    
-    font-family: monospace, sans-serif;
+    font-family: Helvetica, sans-serif;
+}
 
-    background-color:black;
-    background-image:url("images/javier-esteban-freeway.jpg");
+/*home container for index page*/
+.home-container {
+    background-color: black;
+    background-image:url("images/sky-background.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     background-position: center;
-}
-
-/*css grid layout for home-page*/
-.grid {
-    display: grid;
+    background-size: cover;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 4fr .2fr;
     
-    grid-template-areas:
-        "topnav topnav topnav"
-        "main main main"
-        "footer footer footer";
-    grid-gap: 0;
-    
-    
+    padding: 0px;
+    margin: 0px;
 }
 
-.grid2 {
-    display: grid;
-    height: 100vh;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 4fr .2fr;
-    
-    grid-template-areas:
-        "topnav topnav topnav topnav"
-        "projects projects projects projects"
-        "footer footer footer footer";
-    grid-column-gap: .2em;
-    
-}
-
-.grid3 {
-    display: grid;
-    height: 100vh;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 4fr .2fr;
-    
-    grid-template-areas:
-        "topnav topnav topnav"
-        "about about about"
-        "footer footer footer";
-    grid-gap: 0;
-}
-
-
-/*nested grid navigation and nav styling*/
+/*top navigation for all pages*/
 .top-nav {
+    background-color: #0D3948;
     
     grid-area: topnav;
 }
-
 .top-nav ul {
     display: grid;
     grid-gap: 1em;
     padding: 0px;
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
-    
 }
-
 .top-nav a {
     display: block;
     text-align: center;
-    color:white;
+    color:#fff;
     text-decoration: none;
 }
 .active{
-    text-decoration: #4be1f4 underline; 
+    text-decoration: 2px #7C9CA4 underline; 
 }
-
 .top-nav a:hover {
-    
-    text-decoration: #4be1f4 overline;
-}
-/*end nav*/
-
-
-/*main header and heading*/
-.main-header {
-    
-    grid-area: main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+    text-decoration: 2px#7C9CA4 overline;
 }
 
-#name-header{
-    
+/*index page center elements -- centered image and text*/
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#home-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 10px solid #fff;
+}
+#name-header {
+    font-size: 100px;
+    color:#fff;
+}
+#wd-header {
+    font-size: 25px;
+    color:#000;
     text-align: center;
-    color: #0078d7;
-    background-color: white;
-    font-size: 150px; 
 }
 
-/*project space area*/
-.project-space {
-    background: white;
+/*projects page grid styling*/
+.grid {
+    background: #93A49A;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .15fr auto 4fr;
+    
+    grid-template-areas:
+        "topnav topnav topnav"
+        "projects projects projects"
+        "boxes boxes boxes";
+    grid-gap: 0;
+}
+#project-header{
+    font-size: 60px;
+}
+.projects{
+    background-color: #fff;
     grid-area: projects;
-    margin-bottom: 0px;    
 }
-
-.main-text-area{
-    background: #aa2954;
-    grid-area: about;
-    margin-bottom: 0px; 
-}
-
-.social-area {
-    
-    display: grid;
-    text-align: center;
-    grid-template-columns: repeat(3, 1fr);
-    height:400px;
-    grid-gap: .2em;
-    
-}
-
-.social-area a {
-    color:red;
-    text-decoration: underline;
-}
-
-.social-area a:hover {
-    color:black;
-    font-style: italic;
-    text-decoration: none;
-}
-
-/*side bar*/
-.box-link {
-    color:red;
-    
-}
-
-.box-link:hover{
-    
-    color:black;
-    font-style: italic;
-    text-decoration: none;
-    
-}
-
-
-/*content areas*/
 .boxes {
-
+    
     display: grid;
-    padding: 0px;
-    margin: 5px;
-    height: 600px;
+    padding: 5px;
+    margin: 3px;
+    height: auto;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.2em;
+    grid-gap: .5em;
     
+    grid-area: boxes;
 }
-
+.boxes a {
+    color:#004b5e;
+}
+.boxes a:hover {
+    font-style: italic;
+    color: #ff5d00;
+    text-decoration: none;
+}
 #box1 {
-    
-    background: #d87d1d;
-    border: double;
-
-    grid-column: 1;
+    background-color:#BFC7B7;
+    border: 2px solid;
 }
-
 #box2 {
-    background: #d87d1d;
-    border: double;
-    grid-column: 2;
-}
+    background-color:#BFC7B7;
+    border: 2px solid;
 
+}
 #box3 {
-    background: #d87d1d;
-    border: double;
-    grid-column: 3;
+    background-color:#BFC7B7;
+    border: 2px solid;
 }
-
 #box4 {
-    
-    background: #d87d1d;
-    border: double;
-    grid-column: 1;
+    background-color:#BFC7B7;
+    border: 2px solid;
 }
-/*photos on about me page*/
 
+
+/*about me section styling*/
+#about-header{
+    font-size: 60px;
+}
+.about{
+    background-color: #fff;
+    grid-area: projects;
+}
 .photos {
     
-    background-attachment: fixed;
-    background-size: cover; 
     display: grid;
     padding: 0px;
+    margin: 0px;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
     
-    grid-template-columns: repeat(3, 1fr);
-    
+    grid-area: boxes;
 }
-
-
-.photo1{
-    background: url("images/sunset-cliffs.jpg");
-    background-position: center;
+#photo1 {
+    background-color:#BFC7B7;
+    background-image:url("images/spinach-sun.JPG");
+    background-repeat: no-repeat;
+    background-position: bottom;
     background-size: cover;
-    height: 300px;
-    grid-column: 1/3;
-    
-    
+
 }
-.photo2{
-    background:url(images/mugshot4.jpg); 
-    background-position: center;
+#photo2 {
+    background-color:#BFC7B7;
+    background-image:url("images/cherry-tomato.JPG");
+    background-repeat: no-repeat;
+    background-position: bottom;
     background-size: cover;
     
-    grid-column: 3/4;
-    
-}
-.photo3{
-    background: url(images/photoofme1.jpg);
-    background-position: center;
-    background-size: cover;
-   
-    height: 300px;
-    grid-column: 1/2;
-}    
-
-.photo4{
-    background: url("images/streets-background.jpg");
-    background-position: center;
-    background-size: cover;
-    grid-column: 2/4;
-
 }
 
-.email {
-    background-color:rgba(255, 255, 255, 0.7);
-    grid-column: 1/2;
-      
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
+/*contact me styling*/
+.sections {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-area: boxes;
 }
-.github {
-    background-color:rgba(255, 255, 255, 0.6);
-    grid-column: 2;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
+.sections a {
+    color:#004b5e;
+    font-weight: bold;
 }
-
-
-.linkedin {
-    background-color:rgba(255, 255, 255, 0.7);
-    grid-column: 3;
-       
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-}
-/*footer*/
-.footer {
-    background: rgba(23, 23, 23, 0.6);
-    grid-area: footer;
-
-}
-.footer ul {
-    list-style: none;
-    float:left;
-
-    
-}
-
-.footer a {
+.sections a:hover {
+    font-style: italic;
+    color: #ff5d00;
     text-decoration: none;
-    color:white;
+}
+/*svg background generator - https://www.heropatterns.com*/
+#section1 {
+    background-color: #5e8481;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23bfc7b7' fill-opacity='0.5'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    
+    text-align: center;
+}
+#section2 {
+    background-color: #83a49a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%23bfc7b7' fill-opacity='0.5'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    
+    text-align: center;
+}
+#section3 {
+    background-color: #538481;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.67 0 3.182-.683 4.27-1.785A5.998 5.998 0 0 0 14 12h2a4 4 0 0 1 4-4V6c-1.67 0-3.182.683-4.27 1.785C15.905 7.22 16 6.622 16 6c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 20 6V4a4 4 0 0 1-4-4h-2c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 10 0C8.33 0 6.818.683 5.73 1.785 5.905 1.22 6 .622 6 0H4a4 4 0 0 1-4 4v2c1.67 0 3.182.683 4.27 1.785A5.998 5.998 0 0 1 4 6c0-.622.095-1.221.27-1.785A5.982 5.982 0 0 1 0 6v2a4 4 0 0 1 4 4h2zm-4 0a2 2 0 0 0-2-2v2h2zm16 0a2 2 0 0 1 2-2v2h-2zM0 2a2 2 0 0 0 2-2H0v2zm20 0a2 2 0 0 1-2-2h2v2zm-10 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%2383a49a' fill-opacity='0.5' fill-rule='evenodd'/%3E%3C/svg%3E");
+    
+    text-align: center;
+}
+#email{
+    text-align: center;
+    color: white;
+}
+#linkedin{
+    text-align: center;
+    color: white;
+}
+#github{
+    text-align: center;
+    color: white;
 }
 
-.footer a:hover {
-    
-    text-decoration: #4be1f4 underline;
+/*media queries*/
+@media only screen and (max-height: 700px) {
+    #home-photo {
+        width: 200px;
+    }
+    #name-header {
+        font-size: 50px;
+        color:#fff;
+    }
+    #wd-header {
+        font-size: 15px;
+        color:#000;
+        text-align: center;
+    }
 }
-
-
-/*responsive with the use of media queries*/
-@media only screen and (max-width: 550px) {
-    body {
-        background-image:url("images/javier-esteban-freeway-smaller.jpg");
+@media only screen and (max-width: 700px) {
+    #home-photo {
+        width: 200px;
     }
-    
-    .grid {
-    
-        grid-template-columns: 1fr;
-        grid-template-rows: .2fr 4fr 1fr;
-        grid-template-areas:
-            "topnav"
-            "main"
-            "footer";  
+    #name-header {
+        font-size: 50px;
+        color:#fff;
     }
-    .grid2 {
-    
-        grid-template-columns: 1fr;
-        grid-template-rows: .2fr 4fr 1fr;
-        grid-template-areas:
-            "topnav"
-            "projects"
-            "footer";
-        grid-row-gap: .3em;
+    #wd-header {
+        font-size: 15px;
+        color:#000;
+        text-align: center;
     }
-    .grid3 {
-    
-        grid-template-columns: 1fr;
-        grid-template-rows: .2fr 4fr 1fr;
-        grid-template-areas:
-            "topnav"
-            "about"
-            "footer";  
-    }
-    
+}
+@media only screen and (max-width: 820px){
     .boxes {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        
-        margin: 0;
+        display: grid;
+        padding: 5px;
+        margin: 3px;
+        height: auto;
+        width: auto;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: .5em;
+
+        grid-area: boxes;
     }
     #box1 {
-        
         grid-row: 1/1;
         grid-column: 1/4;
     }
     #box2 {
-        
         grid-row: 2/2;
         grid-column: 1/4;
     }
     #box3 {
-        
         grid-row: 3/3;
         grid-column: 1/4;
     }
     #box4 {
-        
         grid-row: 4/4;
         grid-column: 1/4;
-    }
-    
-    .photos {
-    
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        
-    }
-    .photo1 {
-        grid-row: 1/1;
-        grid-column: 1/4;
-        
-    }
-    .photo2 {
-        grid-row: 2/2;
-        grid-column: 1/4;
-        
-    }
-    .photo3 {
-        grid-row: 3/3;
-        grid-column: 1/4;
-        
-    }
-    .photo4 {
-        grid-row: 4/4;
-        grid-column: 1/4;
-        
-    }
-
-    .main-text-area{
-        
-        padding-bottom: 200px;
-    }
-    .social-area {
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        
-    }
-    .email {
-        background-color:rgba(255, 255, 255, 0.7);
-        grid-column: 1/4;
-        grid-row: 1/1;
-        padding-top: 10px;
-        
-        flex-direction: none;
-
-    }
-    .github {
-        background-color:rgba(255, 255, 255, 0.6);
-        grid-column: 1/4;
-        grid-row: 2/2;
-        padding-top: 10px;
-        
-        display: block;
-        flex-direction: none;
-    }
-    .linkedin {
-        background-color:rgba(255, 255, 255, 0.7);
-        grid-column: 1/4;
-        grid-row: 3/3;
-        padding-top: 10px;
-        
-        justify-content:center;
-        align-items: center;
-    }
-    .main-header {
-        
-        padding-top: 0px;
-        
-    }
-    #name-header{
-        font-size: 70px; 
-    }
-    .footer ul {
-        text-align: center;
-        padding: 0;
-        float: none;
-    }
-    .footer-header {
-        padding: 5px;
-        margin: 0px;
     }
 }
+
