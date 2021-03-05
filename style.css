@@ -145,6 +145,19 @@ body {
 #about-header{
     font-size: 60px;
 }
+.grid-about {
+    background: #93a49A;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .15fr auto 4fr;
+    
+    grid-template-areas:
+        "topnav topnav topnav"
+        "projects projects projects"
+        "boxes boxes boxes";
+    grid-gap: 0;
+}
 .about{
     background-color: #fff;
     grid-area: projects;
