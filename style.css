@@ -259,8 +259,7 @@ body {
     
 @media only screen and (max-width : 530px) {
     .home-container {
-        height: 800px;
-
+        height: 100vh;
         padding: 0px;
         margin: 0px;
     }
@@ -298,10 +297,10 @@ body {
         text-align: center;
     }
 }
-/*
+
 @media only screen and (max-height: 700px) {
 
-    .grid {
+    .grid-about {
         background: #93a49A;
         display: grid;
         height: 800px;
@@ -314,25 +313,8 @@ body {
             "boxes boxes boxes";
         grid-gap: 0;
     }
-    #project-header{
-        font-size: 60px;
-    }
-    .projects{
-        background-color: #fff;
-        grid-area: projects;
-    }
-    .boxes {
 
-        display: grid;
-        padding: 5px;
-        margin: 3px;
-        height: auto;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: .5em;
-
-        grid-area: boxes;
-    }
-}*/
+}
     
 @media only screen and (max-width: 820px){
     .boxes {
